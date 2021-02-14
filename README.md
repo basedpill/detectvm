@@ -20,11 +20,11 @@ Can be built using g++ (Sometimes cannot run on VMs using gcc unsure why)
 g++ antivm.cpp -o antivm.exe -static-libgcc -static-libstdc++
 ```
 
-##Demo 🎥
-
+## Demo 🎥
+###VMware Demonstration
 ![VMware Demonstration](demos/demo.gif)
+###VirtualBox Demonstration
 ![VirtualBox Demonstration](demos/demo2.gif)
-
 
 ## Author
 
