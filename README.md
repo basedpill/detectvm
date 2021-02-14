@@ -1,12 +1,6 @@
 # VMware and VBox Detector 👋
 
 
-
-=
-
-=
-
-
 ## ✨ Overview ✨
 • Detects VMware (If VMware tools are installed)
 • Detects Oracle VirtualBox
