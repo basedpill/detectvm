@@ -1,5 +1,5 @@
 # VMware and VBox Detector 👋
-
+![Swagger Validator](https://img.shields.io/swagger/valid/3.0?specUrl=https%3A%2F%2Fraw.githubusercontent.com%2FOAI%2FOpenAPI-Specification%2Fmaster%2Fexamples%2Fv2.0%2Fjson%2Fpetstore-expanded.json) ![GitHub last commit](https://img.shields.io/github/last-commit/mayhapsDev/detectvm) ![rating](https://img.shields.io/badge/Rating-5%2F5-brightgreen)
 
 ## ✨ Overview ✨
 • Detects VMware (If VMware tools are installed)
