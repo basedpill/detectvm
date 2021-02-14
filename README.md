@@ -21,9 +21,9 @@ g++ antivm.cpp -o antivm.exe -static-libgcc -static-libstdc++
 ```
 
 ## Demo 🎥
-###VMware Demonstration
+### VMware Demonstration
 ![VMware Demonstration](demos/demo.gif)
-###VirtualBox Demonstration
+### VirtualBox Demonstration
 ![VirtualBox Demonstration](demos/demo2.gif)
 
 ## Author
