@@ -6,9 +6,9 @@
 - Detects Oracle VirtualBox
 - Self deletes if a vm is detected
 
-Checks for the psuedo device ``\\.\VBoxMiniRdrDN`` which exists in virtualbox vms.
-Checks for vmware tools registry.
-Self Delete function spawns a hidden cmd shell which gets the file path and deletes it.
+Checks for the psuedo device ``\\.\VBoxMiniRdrDN`` which exists in virtualbox vms.  
+Checks for the vmware tools registry ``SOFTWARE\VMware, Inc.\VMware Tool`` .  
+Self Delete function spawns a hidden cmd shell which gets the file path and deletes it.  
 
 ## Prerequisites
 
