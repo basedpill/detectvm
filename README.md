@@ -40,6 +40,9 @@ Feel free to check
 Give a ⭐️ if this project helped you!
 
 
-## 📝 License
+## To-Do
 
-No licence
+- [ ]Add KVM detection
+- [ ]Add Hyper-V detection
+- [ ]Add QEMU detection
+- [ ]Improve VMware detection
