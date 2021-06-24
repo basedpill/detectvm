@@ -1,6 +1,7 @@
-#include <iostream>
 #include <windows.h>
 #include <tchar.h>
+#include <stdbool.h>
+#include <stdio.h>
 
 BOOL SelfDelete(){
 TCHAR szFile[MAX_PATH], szCmd[MAX_PATH];
@@ -23,8 +24,8 @@ bool IsVMwareVM(){
 }
 
 int main(){
-    if (IsVboxVM() == true){std::cout << "Running in vbox!";}
-    else if(IsVMwareVM()==true){std::cout << "Running in vmware!";}
-    else{std::cout << "Not in vbox or vmware!";}
+    if (IsVboxVM() == true){printf("Running in vbox!");}
+    else if(IsVMwareVM()==true){printf("Running in vmware!");}
+    else{printf("Not in vbox or vmware!");}
     if (IsVboxVM() == true || IsVMwareVM() == true){SelfDelete(); exit(-1);}
 }
