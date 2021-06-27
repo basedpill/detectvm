@@ -2,9 +2,10 @@
 ![Swagger Validator](https://img.shields.io/swagger/valid/3.0?specUrl=https%3A%2F%2Fraw.githubusercontent.com%2FOAI%2FOpenAPI-Specification%2Fmaster%2Fexamples%2Fv2.0%2Fjson%2Fpetstore-expanded.json) ![GitHub last commit](https://img.shields.io/github/last-commit/mayhapsDev/detectvm) ![rating](https://img.shields.io/badge/Rating-5%2F5-brightgreen)
 
 ## ✨ Overview ✨
-- Detects VMware (If VMware tools are installed)
-- Detects Oracle VirtualBox
-- Self deletes if a vm is detected
+- Can detect VMware (If VMware tools are installed)
+- Can detect Oracle VirtualBox
+- Can self delete if a vm is detected
+- Header file is included with all the functions in a namespace DetectVM
 
 Checks for the psuedo device ``\\.\VBoxMiniRdrDN`` which exists in virtualbox vms.  
 Checks for the vmware tools registry ``SOFTWARE\VMware, Inc.\VMware Tool`` .  
