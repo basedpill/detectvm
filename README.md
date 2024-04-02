@@ -44,6 +44,6 @@ Give a ⭐️ if this project helped you!
 ## To-Do
 
 - [ ] Add KVM detection
-- [ ] Add Hyper-V detection
+- [x] Add Hyper-V detection
 - [ ] Add QEMU detection
 - [ ] Improve VMware detection
