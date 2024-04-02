@@ -1,0 +1,5 @@
+#Add build folder
+out
+
+#Add visual studio cache/temp folder
+.vs
