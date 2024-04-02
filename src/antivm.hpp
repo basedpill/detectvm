@@ -4,6 +4,8 @@
 #include <tchar.h>
 #include <stdbool.h>
 
+#include "hyperv.hpp"
+
 namespace DetectVM {
     bool IsVboxVM(){
         HANDLE handle = CreateFile(_T("\\\\.\\VBoxMiniRdrDN"), GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
@@ -18,21 +20,9 @@ namespace DetectVM {
     }
 
     bool IsMsHyperV() {
-        HKEY hKey = 0; DWORD dwType = REG_SZ; char buf[255] = { 0 }; DWORD dwBufSize = sizeof(buf);
-
-        //Check registry for system manufacturer
-        if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, TEXT("SYSTEM\\HardwareConfig\\Current\\"), 0, KEY_QUERY_VALUE, &hKey) == ERROR_SUCCESS)
-        {
-            LSTATUS result = RegGetValue(hKey, NULL, TEXT("SystemManufacturer"), RRF_RT_REG_SZ, NULL, buf, &dwBufSize);
-            if (result == ERROR_SUCCESS)
-            {
-                if (strcmp(buf, "Microsoft Corporation") == 0)
-                    return true;
-            }
-        }
-
-
-        return false;
+        //Use multiple known reg entries to indicate Virtual Machines
+        return HyperV::DetectBySystemManufacturer() || HyperV::DetectByBiosVendor() || HyperV::DetectBySystemFamily()
+            || HyperV::DetectByProductName();
     }
 
     BOOL SelfDelete(){
